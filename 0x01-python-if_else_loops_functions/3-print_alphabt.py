@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-print(''.join(chr(i) for i in range(ord('a'), ord('z')+1) if chr(i) not in 'qe'),
+print(''.join(['{}'.format(chr(i)) for i in range(ord('a'), ord('z') + 1) if chr(i) not in 'qe']),
       end='')
