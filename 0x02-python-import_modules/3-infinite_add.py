@@ -1,8 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import sys
 
-args = sys.argv[1:]
-int_args = [int(arg) for arg in args]
-total = sum(int_args)
-print(total)
+length = len(sys.argv)
+result = 0
+if __name__ == "__main__":
+    if length == 1:
+        result = 0
+    else:
+        for i in range(1, length):
+            result += int(sys.argv[i])
+    print("{:d}".format(result))
