@@ -3,13 +3,13 @@
 import sys
 
 if __name__ == "__main__":
-    num_args = len(sys.argv)
+    length = len(sys.argv)
 
-    if num_args == 1:
-        print("{} arguments".format(num_args - 1))
-    elif num_args == 2:
-        print("{} argument".format(num_args - 1))
+    if length == 1:
+        print("{:d} arguments.".format(length - 1))
+    elif length == 2:
+        print("{:d} argument:".format(length - 1))
     else:
-        print("{} arguments:".format(num_args - 1))
-for i in range(1, num_args):
-    print("{}: {}".format(i, sys.argv[i]))
+        print("{:d} arguments:".format(length - 1))
+    for i in range(1, length):
+        print("{:d}: {:s}".format(i, sys.argv[i]))
