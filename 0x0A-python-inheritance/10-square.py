@@ -1,41 +1,35 @@
 #!/usr/bin/python3
 """
-    7-rectangle: class Rectangle from BaseGeomerty
+    10-square: class Square from Rectangle
 """
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Rectangle(BaseGeometry):
+class Square(Rectangle):
     """
-        Rectangle inherits from BaseGeometry
+        Square  inherits from Rectangle
         Attributes:
-            width (int): width of rectangle.
-            height (int): height of rectangle.
+            size (int): side of square
         Methods:
-            __init__ - initialises the Rectangle.
+            __init__ - initialises the square
     """
-    def __init__(self, width, height):
+    def __init__(self, size):
         """
-            initialises Rectangle.
+            initialises Square
         """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        self.integer_validator("size", size)
 
-        self.__width = width
-        self.__height = height
+        self.__size = size
 
     def area(self):
         """
-            Returns the area of a rectangle
+            Returns the area of square
         """
-        area = self.__width * self.__height
+        area = self.__size * self.__size
         return area
 
     def __str__(self):
-        """
-            retruns a string of rectangle details
-        """
-        return ("[{}] {}/{}".format(type(self).__name__,
-                                    self.__width, self.__height))
+        return ("[{}] {}/{}".format("Rectangle",
+                                    self.__size, self.__size))
