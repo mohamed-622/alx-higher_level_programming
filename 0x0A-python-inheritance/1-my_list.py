@@ -1,9 +1,18 @@
 #!/usr/bin/python3
+"""
+    1-my_list: class MyList
+"""
+
 
 class MyList(list):
-    """Subclass of list with additional functionality."""
-
+    """
+        This class inherits from list.
+        Attributes:
+        Methods:
+            print_sorted - prints the list in ascending order
+    """
     def print_sorted(self):
-        """Prints the list in sorted order (ascending)."""
-        sorted_list = sorted(self)
-        print(sorted_list)
+        """
+           prints a list in ascending order.
+        """
+        print(sorted(self))
