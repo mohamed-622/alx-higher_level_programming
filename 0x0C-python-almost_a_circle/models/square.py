@@ -1,5 +1,6 @@
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
@@ -35,12 +36,12 @@ class Square(Rectangle):
 
         try:
             self.id = args[0]
-            self.size = args[1]
             self.x = args[2]
+            self.size = args[1]
             self.y = args[3]
         except IndexError:
             pass
-        
+
     def to_dictionary(self):
         """
             Returns the dictionary representation of a Square

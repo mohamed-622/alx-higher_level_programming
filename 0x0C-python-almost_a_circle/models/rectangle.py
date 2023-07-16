@@ -71,19 +71,20 @@ class Rectangle(Base):
         """
         rectangle = ""
         print_symbol = "#"
-        
+
         print("\n" * self.y, end="")
 
         for i in range(self.height):
             rectangle += (" " * self.x) + (print_symbol*self.width) + "\n"
         print(rectangle, end="")
-    
+
     def __str__(self):
         """
             return string format of a rectangle
         """
-        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.__x, self.__y, self.__width, self.height)
-    
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
+			self.__x, self.__y, self.__width, self.height)
+
     def update(self, *args, **kwargs):
         """
             assigns key/value argument to attributes
@@ -105,15 +106,15 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
-    
+
     def to_dictionary(self):
         """
           Returns the dictionary representation of the Rectangle.
         """
         return {
         'x': self.x,
-        'y': self.y
+        'y': self.y,
         'id': self.id,
         'height': self.height,
         'width': self.width,
-    }
+	}
