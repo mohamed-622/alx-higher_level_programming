@@ -1,7 +1,7 @@
 import unittest
 from models.base import Base
 
-class TestBase(unittest, TestCase):
+class TestBase(unittest.TestCase):
   
   """
       Test class for the base class.
