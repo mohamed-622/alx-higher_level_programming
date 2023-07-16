@@ -36,8 +36,8 @@ class Square(Rectangle):
 
         try:
             self.id = args[0]
-            self.x = args[2]
             self.size = args[1]
+            self.x = args[2]
             self.y = args[3]
         except IndexError:
             pass
@@ -47,6 +47,6 @@ class Square(Rectangle):
             Returns the dictionary representation of a Square
         """
         return {'id': getattr(self, "id"),
-                'size': getattr(self, "width"),
                 'x': getattr(self, "x"),
+                'size': getattr(self, "width"),
                 'y': getattr(self, "y")}
