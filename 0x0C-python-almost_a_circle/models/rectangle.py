@@ -83,8 +83,9 @@ class Rectangle(Base):
             return string format of a rectangle
         """
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
-                                                self.__x, self.__y, self.__width, self.height)
-    
+                                                self.__x, self.__y,
+                                                self.__width, self.__height)
+
     def update(self, *args, **kwargs):
         """
             assigns key/value argument to attributes
@@ -112,7 +113,7 @@ class Rectangle(Base):
           Returns the dictionary representation of the Rectangle.
         """
         return {'x': self.x,
-                'y': self.y,
                 'id': self.id,
+                'y': self.y,
                 'height': self.height,
                 'width': self.width}
