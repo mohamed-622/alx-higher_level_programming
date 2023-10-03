@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """Python script that displays the body of the response (decoded in utf-8)"""
-import requests
+import urllib
 import sys
 
+"""You have to manage urllib.error.HTTPError exceptions and print: Error code: followed by the HTTP status code"""
 
 if __name__ == "__main__":
     url = sys.argv[1]
     try:
-        r = requests.get(url)
-        r.raise_for_status()
-        print(r.text)
-    except requests.exceptions.HTTPError as e:
-        print("Error code: {}".format(e.response.status_code))
+        with urllib.request.urlopen(url) as response:
+            print(response.read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))
